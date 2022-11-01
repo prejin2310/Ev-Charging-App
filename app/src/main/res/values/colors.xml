@@ -13,5 +13,9 @@
     <color name="greenlight">#FF82CD47</color>
     <color name="greendark">#FF1C6758</color>
     <color name="greenmid">#FF3D8361</color>
+    <color name="llorange">#FFFD841F</color>
+    <color name="llrose">#FFFF577F</color>
+    <color name="lyellow">#FFFFB200</color>
+    <color name="lrose">#FFFFA1A1</color>
 
 </resources>
