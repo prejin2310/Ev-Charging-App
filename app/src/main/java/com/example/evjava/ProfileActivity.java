@@ -47,9 +47,9 @@ public class ProfileActivity extends AppCompatActivity {
         reference= FirebaseDatabase.getInstance().getReference("users");
         userId=user.getUid();
 
-        final TextView greetingTextView=(TextView) findViewById(R.id.gretings);
-        final TextView mailTextView=(TextView) findViewById(R.id.empty_emailadds);
-        final TextView nameTextView=(TextView) findViewById(R.id.empty_fulname);
+        final TextView greetingTextView=(TextView) findViewById(R.id.welcometxt);
+        final TextView mailTextView=(TextView) findViewById(R.id.emailadds);
+        final TextView nameTextView=(TextView) findViewById(R.id.ic_name);
 
         reference.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

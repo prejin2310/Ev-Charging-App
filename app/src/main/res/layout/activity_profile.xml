@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,54 +8,98 @@
     android:padding="25dp"
     android:orientation="vertical"
     tools:context=".ProfileActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/profilepic">
 
-    <TextView
-        android:id="@+id/gretings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:layout_marginTop="20dp">
-    </TextView>
-    <TextView
-        android:id="@+id/emailadds"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="Email Id: "
-        android:layout_marginTop="20dp">
-    </TextView>
-    <TextView
-        android:id="@+id/empty_emailadds"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:layout_marginTop="20dp">
-    </TextView>
-    <TextView
-        android:id="@+id/fulname_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="Full Name: "
-        android:layout_marginTop="20dp">
-    </TextView>
-    <TextView
-        android:id="@+id/empty_fulname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="Full Name: "
-        android:layout_marginTop="20dp">
-    </TextView>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/profiledp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/no_profile_pic"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/welcometxt"
+                android:layout_below="@+id/profiledp"
+                android:textSize="20dp"
+                android:hint="Loading..."
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:layout_margin="15dp"
+            >
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ic_profile"
+                android:background="@drawable/ic_profile"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ic_name"
+                android:layout_alignStart="@+id/ic_profile"
+                android:hint="Loading...."
+                android:layout_marginStart="50dp"
+                android:textSize="18sp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/div1"
+                android:layout_below="@+id/ic_profile"
+                android:background="#C8C8C7"/>
 
-    <Button
-        android:id="@+id/signout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="300dp"
-        android:textColor="@color/white2"
-        android:text="Sign Out"
-        android:background="@drawable/rounded_corner"
-        android:backgroundTint="@color/red"/>
-</LinearLayout>
+<!--            card 2-->
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ic_email"
+                android:layout_below="@+id/div1"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_email"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailadds"
+                android:layout_alignStart="@+id/ic_email"
+                android:hint="Loading...."
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/div1"
+                android:layout_marginStart="50dp"
+                android:textSize="18sp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/emailadds"
+                android:background="#C8C8C7"/>
+
+
+        </RelativeLayout>
+        <Button
+            android:id="@+id/signout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="180dp"
+            android:textColor="@color/white2"
+            android:text="Sign Out"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/red"/>
+    </LinearLayout>
+
+</ScrollView>

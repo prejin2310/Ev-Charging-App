@@ -22,11 +22,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pick the Service you need?"
+            android:hint="Loading..."
             android:textSize="26dp"
+            android:id="@+id/ds_welcome"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick the Service you need"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="#4A4A4A" />
 
 
     </LinearLayout>
