@@ -7,9 +7,13 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     public CardView c1,c2,c3,c4;
+    public Button sout;
 
 
     @SuppressLint("MissingInflatedId")
@@ -22,11 +26,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         c2=(CardView) findViewById(R.id.find_station);
         c3=(CardView) findViewById(R.id.view_books);
         c4=(CardView) findViewById(R.id.user);
+        sout=(Button) findViewById(R.id.signout);
 
         c1.setOnClickListener(this);
         c2.setOnClickListener(this);
         c3.setOnClickListener(this);
         c4.setOnClickListener(this);
+
+        sout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent i=new Intent(MainActivity.this,LoginActivity.class);
+                startActivity(i);
+            }
+        });
 
     }
 

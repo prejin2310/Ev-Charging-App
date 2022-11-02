@@ -18,6 +18,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegistrationActivity extends AppCompatActivity {
 
@@ -67,7 +68,21 @@ public class RegistrationActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
                                 pbar.setVisibility(View.GONE);
-                                Toast.makeText(RegistrationActivity.this, "User Registred!", Toast.LENGTH_SHORT).show();
+                                user user=new user(fname,mail);
+                                FirebaseDatabase.getInstance().getReference("users")
+                                                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                                        .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                if(task.isSuccessful()){
+                                                    Toast.makeText(RegistrationActivity.this, "User has been Registered", Toast.LENGTH_SHORT).show();
+                                                } else{
+                                                    Toast.makeText(RegistrationActivity.this, "Failed to register! \n Try again!", Toast.LENGTH_SHORT).show();
+                                                }
+                                            }
+                                        });
+
+                                Toast.makeText(RegistrationActivity.this, "User Registered!", Toast.LENGTH_SHORT).show();
                                 Intent i= new Intent(RegistrationActivity.this,Verification.class);
                                 startActivity(i);
                                 finish();
@@ -75,6 +90,7 @@ public class RegistrationActivity extends AppCompatActivity {
                         }
                     });
                 }
+
             }
         });
 

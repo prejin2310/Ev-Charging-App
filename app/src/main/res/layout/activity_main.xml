@@ -166,5 +166,15 @@
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
+        <Button
+            android:id="@+id/signout"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:text="Sign Out"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/btnyellow"/>
+
     </LinearLayout>
 </LinearLayout>
