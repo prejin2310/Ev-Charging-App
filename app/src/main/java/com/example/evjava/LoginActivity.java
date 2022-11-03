@@ -17,6 +17,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -61,9 +65,31 @@ public class LoginActivity extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 progressbar.setVisibility(View.GONE);
                                 Toast.makeText(LoginActivity.this, "login successful", Toast.LENGTH_SHORT).show();
-                                Intent i= new Intent(LoginActivity.this,MainActivity.class);
-                                startActivity(i);
-                                finish();
+
+                                String uid=task.getResult().getUser().getUid();
+                                FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
+                                firebaseDatabase.getReference().child("userdetails").child(uid).child("usertype").addListenerForSingleValueEvent(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                        int usertype=snapshot.getValue(Integer.class);
+                                        if(usertype==0){
+                                            Intent i= new Intent(LoginActivity.this,MainActivity.class);
+                                            startActivity(i);
+                                            finish();
+                                        }
+                                        if(usertype==1){
+                                            Intent i= new Intent(LoginActivity.this,AdminActivity.class);
+                                            startActivity(i);
+                                            finish();
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError error) {
+
+                                    }
+                                });
+
                             } else{
                                 progressbar.setVisibility(View.GONE);
                                 Toast.makeText(LoginActivity.this, "Failed to Login", Toast.LENGTH_SHORT).show();

@@ -60,6 +60,17 @@
             android:textSize="20sp"
             android:inputType="textEmailAddress"
             android:padding="16dp" />
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_corner"
+            android:ems="10"
+            android:hint="Phone Number"
+            android:textSize="20sp"
+            android:inputType="number"
+            android:padding="16dp" />
 
         <EditText
             android:id="@+id/passtxt"

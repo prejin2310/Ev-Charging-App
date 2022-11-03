@@ -44,12 +44,13 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
         user=FirebaseAuth.getInstance().getCurrentUser();
-        reference= FirebaseDatabase.getInstance().getReference("users");
+        reference= FirebaseDatabase.getInstance().getReference("userdetails");
         userId=user.getUid();
 
         final TextView greetingTextView=(TextView) findViewById(R.id.welcometxt);
         final TextView mailTextView=(TextView) findViewById(R.id.emailadds);
         final TextView nameTextView=(TextView) findViewById(R.id.ic_name);
+        final TextView phoneTextView=(TextView) findViewById(R.id.phnumber);
 
         reference.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -57,10 +58,12 @@ public class ProfileActivity extends AppCompatActivity {
                 user user=snapshot.getValue(com.example.evjava.user.class);
                 if(user !=null){
                     String fullname=user.name;
-                    String email=user.email;
+                    String email=user.mail;
+                    String phno=user.phno;
                     greetingTextView.setText("Welcome, "+fullname);
                     nameTextView.setText(fullname);
                     mailTextView.setText(email);
+                    phoneTextView.setText(phno);
 
                 }
             }

@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
         user=FirebaseAuth.getInstance().getCurrentUser();
-        reference= FirebaseDatabase.getInstance().getReference("users");
+        reference= FirebaseDatabase.getInstance().getReference("userdetails");
         userId=user.getUid();
 
         final TextView greetingTextView=(TextView) findViewById(R.id.ds_welcome);
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 user user=snapshot.getValue(com.example.evjava.user.class);
                 if(user !=null){
                     String fullname=user.name;
-                    String email=user.email;
+                    String email=user.mail;
                     greetingTextView.setText("Welcome, "+fullname);
 
                 }
