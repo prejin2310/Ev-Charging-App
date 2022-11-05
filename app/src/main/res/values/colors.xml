@@ -18,5 +18,9 @@
     <color name="lyellow">#FFFFB200</color>
     <color name="btnyellow">#F6D78E</color>
     <color name="lrose">#FFFFA1A1</color>
+    <color name="transparent">#00FFA1A1</color>
+    <color name="btnblue">#5b67f1</color>
+    <color name="card">#f5f5ff</color>
+    <color name="lavender">#afb4f8</color>
 
 </resources>

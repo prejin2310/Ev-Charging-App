@@ -24,7 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class LoginActivity extends AppCompatActivity {
 
-    TextView mail,pass;
+    TextView mail, pass;
     Button login;
     ProgressBar progressbar;
     TextView createAcc;
@@ -35,17 +35,17 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        mail=findViewById(R.id.emailreg);
-        pass=findViewById(R.id.passtxt);
-        login=findViewById(R.id.login_btn);
-        createAcc=findViewById(R.id.create_account);
-        progressbar=findViewById(R.id.progressbar);
-        mAuth=FirebaseAuth.getInstance();
+        mail = findViewById(R.id.emailreg);
+        pass = findViewById(R.id.passtxt);
+        login = findViewById(R.id.login_btn);
+        createAcc = findViewById(R.id.create_account);
+        progressbar = findViewById(R.id.progressbar);
+        mAuth = FirebaseAuth.getInstance();
 
         createAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(LoginActivity.this,RegistrationActivity.class);
+                Intent i = new Intent(LoginActivity.this, RegistrationActivity.class);
                 startActivity(i);
             }
         });
@@ -53,32 +53,32 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 progressbar.setVisibility(View.VISIBLE);
-                String email=mail.getText().toString();
-                String passx=pass.getText().toString();
-                if(TextUtils.isEmpty(email) && TextUtils.isEmpty(passx)){
+                String email = mail.getText().toString();
+                String passx = pass.getText().toString();
+                if (TextUtils.isEmpty(email) && TextUtils.isEmpty(passx)) {
                     Toast.makeText(LoginActivity.this, "Please enter your credentials/", Toast.LENGTH_SHORT).show();
                     return;
-                } else{
-                    mAuth.signInWithEmailAndPassword(email,passx).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                } else {
+                    mAuth.signInWithEmailAndPassword(email, passx).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(task.isSuccessful()){
+                            if (task.isSuccessful()) {
                                 progressbar.setVisibility(View.GONE);
                                 Toast.makeText(LoginActivity.this, "login successful", Toast.LENGTH_SHORT).show();
 
-                                String uid=task.getResult().getUser().getUid();
-                                FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
+                                String uid = task.getResult().getUser().getUid();
+                                FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
                                 firebaseDatabase.getReference().child("userdetails").child(uid).child("usertype").addListenerForSingleValueEvent(new ValueEventListener() {
                                     @Override
                                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                        int usertype=snapshot.getValue(Integer.class);
-                                        if(usertype==0){
-                                            Intent i= new Intent(LoginActivity.this,MainActivity.class);
+                                        int usertype = snapshot.getValue(Integer.class);
+                                        if (usertype == 0) {
+                                            Intent i = new Intent(LoginActivity.this, MainActivity.class);
                                             startActivity(i);
                                             finish();
                                         }
-                                        if(usertype==1){
-                                            Intent i= new Intent(LoginActivity.this,AdminActivity.class);
+                                        if (usertype == 1) {
+                                            Intent i = new Intent(LoginActivity.this, AdminActivity.class);
                                             startActivity(i);
                                             finish();
                                         }
@@ -90,7 +90,7 @@ public class LoginActivity extends AppCompatActivity {
                                     }
                                 });
 
-                            } else{
+                            } else {
                                 progressbar.setVisibility(View.GONE);
                                 Toast.makeText(LoginActivity.this, "Failed to Login", Toast.LENGTH_SHORT).show();
                             }
@@ -100,7 +100,8 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-////This function checks the user is already login , then automatically redirect to main page for next time app open
+
+    ////This function checks the user is already login , then automatically redirect to main page for next time app open
     @Override
     protected void onStart() {
         super.onStart();

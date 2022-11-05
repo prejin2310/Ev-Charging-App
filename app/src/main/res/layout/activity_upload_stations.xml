@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadStations">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload EV Charging Station Details"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"/>
+
+<!--        textfield 1-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="8dp"
+            android:text="Station Name"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/stat_name"
+                android:layout_height="45dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/edittext"
+                android:layout_marginTop="8dp"/>
+
+        <!--        textfield 2-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:text="Description"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/stat_desc"
+            android:layout_height="45dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="8dp"/>
+
+        <!--        textfield 3-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:text="Location"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/stat_loc"
+            android:layout_height="45dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="8dp"/>
+        <!--        textfield 4-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:text="City"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/stat_city"
+            android:layout_height="45dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="8dp"/>
+
+        <!--        textfield 5-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:text="Map Loc Link"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/stat_map"
+            android:layout_height="45dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="8dp"/>
+
+        <!--        textfield 6-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:text="Station Available Y/N"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/stat_avail"
+            android:layout_height="45dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:text="Upload Photo"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/cloudupload"
+            android:id="@+id/uploadbtn"/>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:id="@+id/relative"
+    android:layout_marginTop="10dp"
+    android:visibility="gone"
+
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/stat_pic"/>
+</RelativeLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/submit"
+            android:background="@color/greenmain"
+            android:text="Submit"
+            android:textColor="@color/white2"
+            android:layout_margin="10dp"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

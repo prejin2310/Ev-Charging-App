@@ -70,6 +70,7 @@ public class RegistrationActivity extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 Intent i=new Intent(RegistrationActivity.this,LoginActivity.class);
                                 startActivity(i);
+                                finish();
 
                                 String uid=task.getResult().getUser().getUid();
                                 userdetails user= new userdetails(uid,fname,mail,pnumber,passw,0);
