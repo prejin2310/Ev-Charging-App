@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/open_sans"
                 android:text="Description"
-                android:textAlignment="center"
+                android:textAlignment="inherit"
                 android:layout_gravity="center"
                 android:textColor="#6E85B7"
                 android:textSize="15dp" />
@@ -68,8 +68,6 @@
                 android:fontFamily="@font/nunito_sans"
                 android:layout_height="wrap_content"
                 android:text="Loading...."
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
                 android:textStyle="normal"
                 android:textSize="15dp"
                 android:textColor="#6E85B7"/>
@@ -78,7 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_marginTop="10dp"
@@ -120,7 +118,7 @@
                 android:fontFamily="@font/nunito_sans_bold"
                 android:textStyle="bold"
                 android:textSize="18dp"
-                android:textColor="#5F6F94"/>
+                android:textColor="#1F283C"/>
             <TextView
                 android:id="@+id/sType"
                 android:layout_marginTop="10dp"
@@ -157,7 +155,7 @@
                 android:textStyle="bold"
                 android:fontFamily="@font/nunito_sans_bold"
                 android:textSize="18dp"
-                android:textColor="#5F6F94"/>
+                android:textColor="#1F283C"/>
             <TextView
                 android:id="@+id/sAvail"
                 android:layout_marginTop="10dp"
@@ -167,8 +165,35 @@
                 android:fontFamily="@font/nunito_sans_bold"
                 android:layout_marginLeft="10dp"
                 android:textSize="18dp"
-                android:textStyle="bold"
                 android:textColor="#4CAF50"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="7dp"
+                android:paddingLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Get Direction on Map"
+                android:fontFamily="@font/nunito_sans_bold"
+                android:textStyle="bold"
+                android:textSize="19dp"
+                android:textColor="#1F283C"/>
+            <Button
+                android:id="@+id/btnDir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="Get Direction"
+                android:fontFamily="@font/nunito_sans_bold"
+                android:layout_marginTop="10dp"
+                android:autoLink="web"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="#E5E8FD"/>
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -179,22 +204,13 @@
                 android:id="@+id/btnBook"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="5dp"
                 android:text="Book your Slots"
                 android:fontFamily="@font/nunito_sans_bold"
                 android:background="@drawable/rounded_corner"
                 android:backgroundTint="#9299FA"
                 android:textColor="@color/white"/>
-            <Button
-                android:id="@+id/btnDir"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Get Direction"
-                android:fontFamily="@font/nunito_sans_bold"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/rounded_corner"
-                android:backgroundTint="@color/llrose"
-                android:textColor="@color/white"/>
+
 
 
         </LinearLayout>

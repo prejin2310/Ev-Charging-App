@@ -13,6 +13,7 @@ public class dbstation {
     public String stat_kw;
     public String stat_pic;
 
+
     public dbstation(){}
 
 
@@ -99,6 +100,7 @@ public class dbstation {
     public void setStat_kw(String stat_kw) {
         this.stat_kw = stat_kw;
     }
+
 
 
 

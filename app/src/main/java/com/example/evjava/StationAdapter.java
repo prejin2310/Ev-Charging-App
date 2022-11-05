@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.animation.AnimationUtils;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -58,6 +59,7 @@ public class StationAdapter extends RecyclerView.Adapter<StationAdapter.ViewHold
                 i.putExtra("sType",model.getStat_type());
                 i.putExtra("sKw",model.getStat_kw());
                 i.putExtra("sAvail",model.getStat_avail());
+                i.putExtra("MapLink",model.getStat_map());
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
             }
@@ -72,6 +74,7 @@ public class StationAdapter extends RecyclerView.Adapter<StationAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
+        public View cardView;
         TextView show_avail,show_city,show_desc,show_loc,stHeading,show_type;
         ImageView itemImage;
 
