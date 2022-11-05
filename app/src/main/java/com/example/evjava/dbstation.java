@@ -3,19 +3,28 @@ package com.example.evjava;
 import android.widget.ImageView;
 
 public class dbstation {
-   public String stat_name,stat_desc,stat_loc,stat_city,stat_map,stat_avail;
+   public String stat_name;
+    public String stat_desc;
+    public String stat_loc;
+    public String stat_city;
+    public String stat_map;
+    public String stat_avail;
+    public String stat_type;
+    public String stat_kw;
     public String stat_pic;
 
     public dbstation(){}
 
 
-    public dbstation(String stat_name, String stat_desc, String stat_loc, String stat_city, String stat_map, String stat_avail, String stat_pic) {
+    public dbstation(String stat_name, String stat_desc, String stat_loc, String stat_city, String stat_map, String stat_avail,String stat_type,String stat_kw, String stat_pic) {
         this.stat_name = stat_name;
         this.stat_desc = stat_desc;
         this.stat_loc = stat_loc;
         this.stat_city = stat_city;
         this.stat_map = stat_map;
         this.stat_avail = stat_avail;
+        this.stat_type = stat_type;
+        this.stat_kw = stat_kw;
         this.stat_pic = stat_pic;
     }
 
@@ -74,4 +83,23 @@ public class dbstation {
     public void setStat_pic(String stat_pic) {
         this.stat_pic = stat_pic;
     }
+
+    public String getStat_type() {
+        return stat_type;
+    }
+
+    public void setStat_type(String stat_type) {
+        this.stat_type = stat_type;
+    }
+
+    public String getStat_kw() {
+        return stat_kw;
+    }
+
+    public void setStat_kw(String stat_kw) {
+        this.stat_kw = stat_kw;
+    }
+
+
+
 }

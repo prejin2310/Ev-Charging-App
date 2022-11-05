@@ -4,21 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="6dp"
     tools:context=".stationlist">
-    
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#EEFAE5"
         app:cardCornerRadius="3dp"
         android:elevation="5dp">
-        
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="6dp"
             android:orientation="vertical">
-            
+
             <TextView
                 android:id="@+id/stHeading"
                 android:layout_width="match_parent"
@@ -27,7 +28,7 @@
                 android:textSize="22dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
-            
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -128,6 +129,31 @@
                             android:maxLines="3"
                             android:layout_marginTop="5dp"
                             android:textSize="16sp"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Type "
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:id="@+id/show_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Loading.."
+                            android:maxLines="3"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp"/>
+
 
                     </LinearLayout>
                 </LinearLayout>

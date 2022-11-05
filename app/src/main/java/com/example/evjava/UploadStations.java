@@ -10,10 +10,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -30,11 +32,12 @@ import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
 
 public class UploadStations extends AppCompatActivity {
-    EditText stat_name,stat_desc,stat_loc,stat_city,stat_map,stat_avail;
+    EditText stat_name,stat_desc,stat_loc,stat_city,stat_map,stat_avail,stat_type,stat_kw;
     ImageView uploadbtn,stat_pic;
     Button submit;
     Uri ImageUrl;
     RelativeLayout relativeLayout;
+
 
     public FirebaseDatabase database=FirebaseDatabase.getInstance();
     public FirebaseStorage firebaseStorage;
@@ -53,9 +56,13 @@ public class UploadStations extends AppCompatActivity {
         stat_map=findViewById(R.id.stat_map);
         stat_avail=findViewById(R.id.stat_avail);
         uploadbtn=findViewById(R.id.uploadbtn);
+        stat_type=findViewById(R.id.stat_type);
+        stat_kw=findViewById(R.id.stat_kw);
+
         stat_pic=findViewById(R.id.stat_pic);
         submit=findViewById(R.id.submit);
         relativeLayout=findViewById(R.id.relative);
+
 
         firebaseStorage=FirebaseStorage.getInstance();
         dialog=new ProgressDialog(this);
@@ -94,6 +101,9 @@ public class UploadStations extends AppCompatActivity {
                                 model.setStat_city(stat_city.getText().toString());
                                 model.setStat_map(stat_map.getText().toString());
                                 model.setStat_avail(stat_avail.getText().toString());
+                                model.setStat_type(stat_type.getText().toString());
+                                model.setStat_kw(stat_kw.getText().toString());
+
                                 model.setStat_pic(uri.toString());
 
                                 database.getReference().child("stations").push().setValue(model)

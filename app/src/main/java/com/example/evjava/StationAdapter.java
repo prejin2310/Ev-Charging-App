@@ -1,6 +1,8 @@
 package com.example.evjava;
 
+import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,6 +44,24 @@ public class StationAdapter extends RecyclerView.Adapter<StationAdapter.ViewHold
         holder.show_city.setText(model.stat_city);
         holder.show_desc.setText(model.stat_desc);
         holder.show_loc.setText(model.stat_loc);
+        holder.show_type.setText(model.stat_type);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(context,SingleStationActivity.class);
+                i.putExtra("sImage",model.getStat_pic());
+                i.putExtra("sTitle",model.getStat_name());
+                i.putExtra("sDesc",model.getStat_desc());
+                i.putExtra("sLoc",model.getStat_loc());
+                i.putExtra("sCity",model.getStat_city());
+                i.putExtra("sType",model.getStat_type());
+                i.putExtra("sKw",model.getStat_kw());
+                i.putExtra("sAvail",model.getStat_avail());
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(i);
+            }
+        });
 
     }
 
@@ -52,7 +72,7 @@ public class StationAdapter extends RecyclerView.Adapter<StationAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView show_avail,show_city,show_desc,show_loc,stHeading;
+        TextView show_avail,show_city,show_desc,show_loc,stHeading,show_type;
         ImageView itemImage;
 
         public ViewHolder(@NonNull View itemView) {
@@ -63,6 +83,8 @@ public class StationAdapter extends RecyclerView.Adapter<StationAdapter.ViewHold
             show_desc=itemView.findViewById(R.id.show_desc);
             show_loc=itemView.findViewById(R.id.show_loc);
             itemImage=itemView.findViewById(R.id.itemImage);
+            show_type=itemView.findViewById(R.id.show_type);
+
         }
     }
 }

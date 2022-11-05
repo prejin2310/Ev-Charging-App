@@ -22,7 +22,7 @@
             android:textAlignment="center"
             android:layout_marginTop="10dp"/>
 
-<!--        textfield 1-->
+<!--textfield 1-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
                 android:background="@drawable/edittext"
                 android:layout_marginTop="8dp"/>
 
-        <!--        textfield 2-->
+<!--textfield 2-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
             android:background="@drawable/edittext"
             android:layout_marginTop="8dp"/>
 
-        <!--        textfield 3-->
+<!--textfield 3-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
             android:paddingLeft="10dp"
             android:background="@drawable/edittext"
             android:layout_marginTop="8dp"/>
-        <!--        textfield 4-->
+<!--textfield 4-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -85,7 +85,7 @@
             android:background="@drawable/edittext"
             android:layout_marginTop="8dp"/>
 
-        <!--        textfield 5-->
+<!--textfield 5-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -101,7 +101,7 @@
             android:background="@drawable/edittext"
             android:layout_marginTop="8dp"/>
 
-        <!--        textfield 6-->
+<!--textfield 6-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -116,7 +116,41 @@
             android:paddingLeft="10dp"
             android:background="@drawable/edittext"
             android:layout_marginTop="8dp"/>
+<!--textfield 7-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:text="Station Type"/>
 
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/stat_type"
+            android:layout_height="45dp"
+            android:hint="Eg: Type 2, Wall socket, CCS, ..."
+            android:paddingLeft="10dp"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="8dp"/>
+<!--textfield 8-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:text="Charger Kilowatt"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/stat_kw"
+            android:layout_height="45dp"
+            android:hint="Eg: 25.0 kW"
+            android:paddingLeft="10dp"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="8dp"/>
+
+
+<!--image upload-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
