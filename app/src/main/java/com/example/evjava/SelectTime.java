@@ -105,9 +105,16 @@ public class SelectTime extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
-                                Toast.makeText(SelectTime.this, "Booking Confirmed", Toast.LENGTH_SHORT).show();
-                                Intent i=new Intent(SelectTime.this,BookingConfirm.class);
-                                startActivity(i);
+                                Toast.makeText(SelectTime.this, "Make Payment", Toast.LENGTH_SHORT).show();
+                                Intent i1=new Intent(SelectTime.this,BookingConfirm.class);
+                                i1.putExtra("Date",currentDate);
+                                i1.putExtra("Time",TimePick);
+                                i1.putExtra("Name",stationname);
+                                i1.putExtra("Loc",stloc);
+                                i1.putExtra("City",sttype);
+                                i1.putExtra("Type",sttype);
+                                startActivity(i1);
+
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
