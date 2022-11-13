@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".EditVehicle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Vehicle"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/greendark"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"/>
+
+        <!--textfield 1-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="8dp"
+                android:text="Select your vechile type"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:id="@+id/radioGroup">
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Two Wheeler"
+                    android:textSize="15sp"
+                    android:checked="true"
+                    android:buttonTint="@color/greenmain"
+                    android:id="@+id/two"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Two Wheeler"
+                    android:buttonTint="@color/greenmain"
+                    android:textSize="15sp"
+                    android:id="@+id/three"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/greenmain"
+                    android:text="Three Wheeler"
+                    android:textSize="15sp"
+                    android:id="@+id/four"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="8dp"
+            android:text="Vehicle Model"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/model"
+            android:layout_height="45dp"
+            android:paddingLeft="10dp"
+            android:hint="OLA s1"
+            android:background="@drawable/edittext"
+            android:backgroundTint="@color/greenmain"
+            android:layout_marginTop="8dp"/>
+
+        <!--textfield 2-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:text="Charge Type"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/acdc"
+            android:layout_height="45dp"
+            android:paddingLeft="10dp"
+            android:hint="AC or DC"
+            android:backgroundTint="@color/greenmain"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="8dp"/>
+
+        <!--textfield 3-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:text="Input av range"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/av_range"
+            android:layout_height="45dp"
+            android:hint="70Km/h"
+            android:backgroundTint="@color/greenmain"
+            android:paddingLeft="10dp"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="8dp"/>
+        <!--textfield 5-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:text="Input time of full charge"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/fullcharge"
+            android:layout_height="45dp"
+            android:backgroundTint="@color/greenmain"
+            android:paddingLeft="10dp"
+            android:hint="25 Min"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="8dp"/>
+
+        <!--textfield 6-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:text="Number of Vehicle"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/evNumber"
+            android:layout_height="45dp"
+            android:hint="LL-NN-LLLL"
+            android:backgroundTint="@color/greenmain"
+            android:paddingLeft="10dp"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="8dp"/>
+        <!--textfield 8-->
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/updateEV"
+            android:background="@color/greenmain"
+            android:text="Submit"
+            android:textColor="@color/white2"
+            android:layout_margin="10dp"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 import com.razorpay.Checkout;
 import com.razorpay.PaymentResultListener;
 
@@ -21,7 +24,6 @@ public class BookingConfirm extends AppCompatActivity implements PaymentResultLi
     TextView sta_name,sta_loc,sta_city,sta_date,sta_time;
     Button payment1;
     String stloc,sttype,TimePick,currentDate;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
