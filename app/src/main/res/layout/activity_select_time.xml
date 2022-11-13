@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/sta_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Station Name"
+                        android:fontFamily="@font/nunito_sans_bold"
+                        android:textColor="#000000"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/sta_loc"
+                        android:layout_height="wrap_content"
+                        android:text="Current Location"
+                        android:fontFamily="@font/open_sans"
+                        android:textStyle="italic"
+                        android:textColor="#012320"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/sta_city"
+                        android:layout_height="wrap_content"
+                        android:text="Current City"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/lato_bold"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose your Time"
+        android:textSize="20sp"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:gravity="center"
+        android:layout_marginTop="190dp"
+        android:textColor="@color/greenmain"/>
+    <GridView
+        android:id="@+id/simple_grid_view_example"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="205dp"
+        android:padding="15dp"
+        android:layout_height="wrap_content"
+        android:columnWidth="100dp"
+        android:minHeight="100dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18dp"
+        android:id="@+id/selectTime"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:gravity="center"
+        android:layout_marginTop="560dp"
+        android:textColor="#DD081C01"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18dp"
+        android:id="@+id/CurrentDate"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:gravity="center"
+        android:layout_marginTop="589dp"
+        android:textColor="#DD081C01"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="640dp"
+        android:padding="25dp"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm Booking"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#9299FA"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

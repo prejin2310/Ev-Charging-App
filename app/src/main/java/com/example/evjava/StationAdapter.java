@@ -1,6 +1,5 @@
 package com.example.evjava;
 
-import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -12,14 +11,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.animation.AnimationUtils;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class StationAdapter extends RecyclerView.Adapter<StationAdapter.ViewHolder>{
 
-    ArrayList<dbstation> list;
+    List<dbstation> list;
+
 
     public StationAdapter(ArrayList<dbstation> list, Context context) {
         this.list = list;
@@ -90,4 +90,5 @@ public class StationAdapter extends RecyclerView.Adapter<StationAdapter.ViewHold
 
         }
     }
+
 }

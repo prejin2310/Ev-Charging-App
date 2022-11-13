@@ -1,5 +1,4 @@
 package com.example.evjava;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -61,9 +60,10 @@ public class SingleStationActivity extends AppCompatActivity {
         Kw.setText(getIntent().getStringExtra("sKw"));
         btnDir.setText(getIntent().getStringExtra("MapLink"));
 
-
-
-        //fetch maplink from db
+        String Title=getIntent().getStringExtra("sTitle");
+        String sLoc=getIntent().getStringExtra("sLoc");
+        String type=getIntent().getStringExtra("sType");
+        String city=getIntent().getStringExtra("sCity");
 
 
 
@@ -72,7 +72,11 @@ public class SingleStationActivity extends AppCompatActivity {
         btnBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(SingleStationActivity.this,BookingActivity.class);
+                Intent i=new Intent(SingleStationActivity.this, SelectTime.class);
+                i.putExtra("STitle",Title);
+                i.putExtra("sLoc",sLoc);
+                i.putExtra("sType",type);
+                i.putExtra("sCity",city);
                 startActivity(i);
             }
         });

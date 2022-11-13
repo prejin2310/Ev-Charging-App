@@ -38,6 +38,21 @@
                 android:background="@drawable/edittext"
                 android:layout_marginTop="8dp"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="8dp"
+            android:text="Station Code"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/stat_code"
+            android:layout_height="45dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="8dp"/>
+
 <!--textfield 2-->
         <TextView
             android:layout_width="match_parent"

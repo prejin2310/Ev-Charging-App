@@ -17,6 +17,20 @@
         android:theme="@style/Theme.EvJava"
         tools:targetApi="31">
         <activity
+            android:name=".BookingConfirm"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SelectTime"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".SingleStationActivity"
             android:exported="false">
             <meta-data

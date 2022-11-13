@@ -12,12 +12,13 @@ public class dbstation {
     public String stat_type;
     public String stat_kw;
     public String stat_pic;
+    public String stat_code;
 
 
     public dbstation(){}
 
 
-    public dbstation(String stat_name, String stat_desc, String stat_loc, String stat_city, String stat_map, String stat_avail,String stat_type,String stat_kw, String stat_pic) {
+    public dbstation(String stat_name, String stat_desc, String stat_loc, String stat_city, String stat_map, String stat_avail,String stat_type,String stat_kw, String stat_pic,String stat_code) {
         this.stat_name = stat_name;
         this.stat_desc = stat_desc;
         this.stat_loc = stat_loc;
@@ -27,6 +28,7 @@ public class dbstation {
         this.stat_type = stat_type;
         this.stat_kw = stat_kw;
         this.stat_pic = stat_pic;
+        this.stat_code=stat_code;
     }
 
     public String getStat_name() {
@@ -99,6 +101,13 @@ public class dbstation {
 
     public void setStat_kw(String stat_kw) {
         this.stat_kw = stat_kw;
+    }
+    public String getStat_code() {
+        return stat_code;
+    }
+
+    public void setStat_code(String stat_code) {
+        this.stat_code = stat_code;
     }
 
 

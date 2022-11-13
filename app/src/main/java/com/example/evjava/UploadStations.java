@@ -32,7 +32,7 @@ import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
 
 public class UploadStations extends AppCompatActivity {
-    EditText stat_name,stat_desc,stat_loc,stat_city,stat_map,stat_avail,stat_type,stat_kw;
+    EditText stat_name,stat_desc,stat_loc,stat_city,stat_map,stat_avail,stat_type,stat_kw,stat_code;
     ImageView uploadbtn,stat_pic;
     Button submit;
     Uri ImageUrl;
@@ -58,6 +58,7 @@ public class UploadStations extends AppCompatActivity {
         uploadbtn=findViewById(R.id.uploadbtn);
         stat_type=findViewById(R.id.stat_type);
         stat_kw=findViewById(R.id.stat_kw);
+        stat_code=findViewById(R.id.stat_code);
 
         stat_pic=findViewById(R.id.stat_pic);
         submit=findViewById(R.id.submit);
@@ -103,6 +104,7 @@ public class UploadStations extends AppCompatActivity {
                                 model.setStat_avail(stat_avail.getText().toString());
                                 model.setStat_type(stat_type.getText().toString());
                                 model.setStat_kw(stat_kw.getText().toString());
+                                model.setStat_code(stat_code.getText().toString());
 
                                 model.setStat_pic(uri.toString());
 
