@@ -58,13 +58,13 @@ public class SingleStationActivity extends AppCompatActivity {
         Avail.setText(getIntent().getStringExtra("sAvail"));
         Type.setText(getIntent().getStringExtra("sType"));
         Kw.setText(getIntent().getStringExtra("sKw"));
-        btnDir.setText(getIntent().getStringExtra("MapLink"));
+//        btnDir.setText(getIntent().getStringExtra("MapLink"));
 
         String Title=getIntent().getStringExtra("sTitle");
         String sLoc=getIntent().getStringExtra("sLoc");
         String type=getIntent().getStringExtra("sType");
         String city=getIntent().getStringExtra("sCity");
-
+        String link=getIntent().getStringExtra("MapLink");
 
 
         //button click code
@@ -78,6 +78,14 @@ public class SingleStationActivity extends AppCompatActivity {
                 i.putExtra("sType",type);
                 i.putExtra("sCity",city);
                 startActivity(i);
+            }
+        });
+
+        btnDir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(Intent.ACTION_VIEW,Uri.parse(link));
+                startActivity(intent);
             }
         });
 
