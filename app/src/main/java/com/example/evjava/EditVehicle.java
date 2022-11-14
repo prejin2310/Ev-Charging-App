@@ -65,7 +65,9 @@ public class EditVehicle extends AppCompatActivity{
                 String number=evNumber.getText().toString();
                 String uid=currentFirebaseUser.getUid();
                 vehicledb vdb= new vehicledb(uid,modeltype,typeofmode,range,chargetym,number,evtype);
-                firebaseDatabase.getReference().child("user-vehicle").child(uid).setValue(vdb)
+
+                final String pushId = FirebaseDatabase.getInstance().getReference().push().getKey();
+                firebaseDatabase.getReference().child("user-vehicle").child(uid).child(pushId).setValue(vdb)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {

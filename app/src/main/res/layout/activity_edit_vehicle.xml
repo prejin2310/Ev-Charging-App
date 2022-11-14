@@ -51,7 +51,7 @@
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Two Wheeler"
+                    android:text="Three Wheeler"
                     android:buttonTint="@color/greenmain"
                     android:textSize="15sp"
                     android:id="@+id/three"/>
@@ -59,7 +59,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/greenmain"
-                    android:text="Three Wheeler"
+                    android:text="Four Wheeler"
                     android:textSize="15sp"
                     android:id="@+id/four"/>
             </RadioGroup>
