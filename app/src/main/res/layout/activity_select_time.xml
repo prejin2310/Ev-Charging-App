@@ -6,7 +6,7 @@
     android:orientation="vertical">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="120dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
@@ -16,7 +16,7 @@
             android:id="@+id/linearLayout1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg1"
+            android:background="@drawable/bg5"
             android:orientation="vertical">
 
             <LinearLayout
@@ -73,13 +73,14 @@
         android:textSize="20sp"
         android:fontFamily="@font/nunito_sans_bold"
         android:gravity="center"
-        android:layout_marginTop="190dp"
-        android:textColor="@color/greenmain"/>
+        android:layout_marginTop="170dp"
+        android:textColor="@color/greendark"/>
     <GridView
         android:id="@+id/simple_grid_view_example"
         android:layout_width="fill_parent"
-        android:layout_marginTop="205dp"
-        android:padding="15dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_height="wrap_content"
         android:columnWidth="100dp"
         android:minHeight="100dp"
@@ -119,8 +120,8 @@
             android:layout_height="wrap_content"
             android:text="Confirm Booking"
             android:fontFamily="@font/nunito_sans_bold"
-            android:background="@drawable/rounded_corner"
-            android:backgroundTint="#9299FA"
+            android:background="@drawable/rzp_green_button"
+
             android:textColor="@color/white"/>
 
     </LinearLayout>

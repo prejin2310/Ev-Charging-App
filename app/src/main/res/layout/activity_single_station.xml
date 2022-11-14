@@ -7,6 +7,7 @@
     tools:context=".SingleStationActivity">
 
     <LinearLayout
+        android:id="@+id/ll1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -14,212 +15,246 @@
             android:id="@+id/sImage"
             android:layout_width="match_parent"
             android:layout_height="240dp"
+            android:scaleType="fitXY"
             android:src="@drawable/img_err"/>
-
-        <TextView
-            android:id="@+id/sTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/lato_black"
-            android:padding="15dp"
-            android:text="Station Name"
-            android:textColor="#1C3879"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="15dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/sDesc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/open_sans"
-                android:text="Description"
-                android:textAlignment="inherit"
-                android:layout_gravity="center"
-                android:textColor="#6E85B7"
-                android:textSize="15dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="15dp"
-            android:orientation="vertical">
-            <TextView
-                android:layout_marginTop="7dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Location"
-                android:fontFamily="@font/nunito_sans_bold"
-                android:textStyle="bold"
-                android:textSize="19dp"
-                android:textColor="#5F6F94"/>
-            <TextView
-                android:id="@+id/sLoc"
-                android:layout_marginTop="4dp"
-                android:layout_width="wrap_content"
-                android:fontFamily="@font/nunito_sans"
-                android:layout_height="wrap_content"
-                android:text="Loading...."
-                android:textStyle="normal"
-                android:textSize="15dp"
-                android:textColor="#6E85B7"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="City"
-                android:fontFamily="@font/nunito_sans_bold"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:textColor="#5F6F94"/>
-            <TextView
-                android:id="@+id/sCity"
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Loading...."
-                android:fontFamily="@font/nunito_sans"
-                android:textSize="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:textStyle="normal"
-                android:textColor="#6E85B7"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="35dp"
-                android:src="@drawable/chargeicon"/>
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Station Type "
-                android:fontFamily="@font/nunito_sans_bold"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:textColor="#1F283C"/>
-            <TextView
-                android:id="@+id/sType"
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Loading.."
-                android:fontFamily="@font/nunito_sans_bold"
-                android:layout_marginLeft="10dp"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                android:textColor="#EB5353"/>
-            <TextView
-                android:id="@+id/sKw"
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="25.0 kW"
-                android:layout_marginLeft="10dp"
-                android:textSize="16dp"
-                android:textStyle="italic"
-                android:textColor="#5F6F94"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Station Availability"
-                android:textStyle="bold"
-                android:fontFamily="@font/nunito_sans_bold"
-                android:textSize="18dp"
-                android:textColor="#1F283C"/>
-            <TextView
-                android:id="@+id/sAvail"
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Loading...."
-                android:fontFamily="@font/nunito_sans_bold"
-                android:layout_marginLeft="10dp"
-                android:textSize="18dp"
-                android:textColor="#4CAF50"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:layout_marginTop="7dp"
-                android:paddingLeft="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Get Direction on Map"
-                android:fontFamily="@font/nunito_sans_bold"
-                android:textStyle="bold"
-                android:textSize="19dp"
-                android:textColor="#1F283C"/>
-            <Button
-                android:id="@+id/btnDir"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:text="Get Direction"
-                android:fontFamily="@font/nunito_sans_bold"
-                android:layout_marginTop="10dp"
-                android:autoLink="web"
-                android:background="@drawable/rounded_corner"
-                android:backgroundTint="#E5E8FD"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:orientation="vertical">
-            <Button
-                android:id="@+id/btnBook"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Book your Slots"
-                android:fontFamily="@font/nunito_sans_bold"
-                android:background="@drawable/rounded_corner"
-                android:backgroundTint="#9299FA"
-                android:textColor="@color/white"/>
-
-
-
-        </LinearLayout>
-
-
-
-
-
-
     </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_below="@+id/ll1"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:cardCornerRadius="13dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:orientation="horizontal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Station Title"
+                    android:textColor="@color/greendark"
+                    android:fontFamily="@font/nunito_sans_bold"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description....."
+                    android:fontFamily="@font/nunito_sans"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loading city...."
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nunito_sans"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sLoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loading city...."
+                    android:fontFamily="@font/nunito_sans"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#D3D2D2"
+                    android:layout_marginLeft="20dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Station Type"
+                    android:fontFamily="@font/nunito_sans_bold"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/sType"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="G2541"
+                    android:fontFamily="@font/nunito_sans_bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Power output"
+                    android:fontFamily="@font/nunito_sans_bold"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/sKw"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:fontFamily="@font/nunito_sans_bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Charger Type"
+                    android:fontFamily="@font/nunito_sans_bold"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="AC / DC / Type2"
+                    android:fontFamily="@font/nunito_sans_bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Availability"
+                    android:fontFamily="@font/nunito_sans_bold"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/sAvail"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Open/Closed"
+                    android:fontFamily="@font/nunito_sans_bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Price"
+                    android:fontFamily="@font/nunito_sans_bold"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="₹130 /Kw"
+                    android:fontFamily="@font/nunito_sans_bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:id="@+id/btnDir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Dashboard"
+        android:background="@drawable/edittext"
+        android:backgroundTint="@color/greenmain"
+        android:textColor="@color/greendark"/>
+    <Button
+        android:id="@+id/btnBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="660dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Book Slot"
+        android:background="@drawable/rzp_green_button"
+       android:textColor="#FFF"/>
+
 
 </RelativeLayout>
