@@ -100,8 +100,9 @@ public class SelectTime extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String uid=currentFirebaseUser.getUid();
+                final String pushId = FirebaseDatabase.getInstance().getReference().push().getKey();
                 bookdb book=new bookdb(uid,stationname,stloc,stcity,sttype,TimePick,currentDate,"no");
-                firebaseDatabase.getReference().child("booking-details").push().setValue(book)
+                firebaseDatabase.getReference().child("booking-details").child(uid).child(pushId).setValue(book)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
