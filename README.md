@@ -23,7 +23,7 @@ An `Android Application` coded in `Java Language` using `Android Studio`. Backen
   <img src = "https://github.com/prejin2310/Ev-Charging-App/blob/8bb9abe5c93f17f0887feb8d11d93dcff1a7b3af/Screenshots/reg.png" alt = "" width="200px"/>
   <img src = "https://github.com/prejin2310/Ev-Charging-App/blob/8bb9abe5c93f17f0887feb8d11d93dcff1a7b3af/Screenshots/login.png" alt = "" width="200px"/>
   <img src = "https://github.com/prejin2310/Ev-Charging-App/blob/8bb9abe5c93f17f0887feb8d11d93dcff1a7b3af/Screenshots/home.png" alt = "" width="200px"/>
-  <img src = "[https://github.com/prejin2310/Ev-Charging-App/blob/8bb9abe5c93f17f0887feb8d11d93dcff1a7b3af/Screenshots/sta.png" alt = "" width="200px"/>
+  <img src = "https://github.com/prejin2310/Ev-Charging-App/blob/8bb9abe5c93f17f0887feb8d11d93dcff1a7b3af/Screenshots/sta.png" alt = "" width="200px"/>
 </div>
 <br/>
 <div align="center">
