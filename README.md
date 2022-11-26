@@ -7,10 +7,10 @@ An `Android Application` coded in `Java Language` using `Android Studio`. Backen
 - User can `Login/Signup`.
 - User can set his `Profile Picture`.
 - User can set his `Vehicle Details`.
-- Users can `Reserve the Charger slot of Station.
-- Users can `Pay the amount in online.
-- Admin can `Add Station and Update details.
-- Admin can `Change the avilability of station.
+- Users can `Reserve the Charger slot of Station`.
+- Users can `Pay the amount in online`.
+- Admin can `Add Station and Update details`.
+- Admin can `Change the avilability of station`.
 
 ### Manual
 1) You must `Run this Project` on Android Studio.
